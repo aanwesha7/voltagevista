@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: lightgoldenrodyellow;
+  color: #333;
+}
+
+.services-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #ff9900;
+  margin-bottom: 15px;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .service-title {
+    font-size: 1.2rem;
+  }
+
+  .service-description {
+    font-size: 0.85rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <section class="services-section">
+    <h1 class="section-title">OUR SERVICES</h1>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="service-icon">🏨</i>
+        <h2 class="service-title">Affordable Hotels</h2>
+        <p class="service-description">
+            Finding the perfect place to stay while traveling shouldn't break the bank. Our affordable hotel services offer you a comfortable and convenient experience at a price that fits your budget. Whether you're traveling for business, leisure, or a family getaway, we ensure you get the best value for your money.
+        </p>
+        </div>
+        
+
+      <div class="service-card">
+        <i class="service-icon">🍽️</i>
+        <h2 class="service-title">Food And Drinks</h2>
+        <p class="service-description">
+            We take pride in offering a wide range of food and beverage options tailored to meet your tastes and preferences. Whether you're looking for a casual meal, a formal dining experience, or refreshing drinks, we have something for every occasion.
+        </p>
+      </div>
+      
+
+      <div class="service-card">
+        <i class="service-icon">📢</i>
+        <h2 class="service-title">Safety Guide</h2>
+        <p class="service-description">
+         At Voyage Vista, the safety of our customers is our highest priority. This guide outlines the essential safety measures, policies, and best practices to ensure a safe experience while using our services.
+        </p>
+      </div>
+
+      
+
+      <div class="service-card">
+        <i class="service-icon">🌍</i>
+        <h2 class="service-title">Around The World</h2>
+        <p class="service-description">
+            Our global services are designed to meet the diverse needs of our clients across continents. From advanced technology integration to comprehensive consulting and support, our teams around the world are committed to delivering excellence. By leveraging a global network, we ensure consistency, innovation, and quality no matter where our clients are located.
+        </p>
+      </div>
+      <div class="service-card">
+        <i class="service-icon">✈️</i>
+        <h2 class="service-title">Fastest Travel</h2>
+        <p class="service-description">
+            In today's fast-paced world, time is invaluable, and efficient travel is a top priority. Our services are designed to revolutionize your journey by combining speed, convenience, and reliability. Whether it's business trips, leisure travel, or urgent commutes, we ensure you reach your destination swiftly without compromising on comfort or quality.
+        </p>
+      </div>
+      <div class="service-card">
+        <i class="service-icon">🥾</i>
+        <h2 class="service-title">Adventures</h2>
+        <p class="service-description">
+            Embark on unforgettable journeys with our adventure services, crafted to ignite your sense of wonder and thrill. Whether you're scaling rugged peaks, diving into azure depths, or trekking through uncharted wilderness, we ensure every moment is filled with excitement and discovery.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<center>
+    <a class="back-link" href="intro.html">Back to Home</a>
+  </center>
+</div>
+  <script>
+    document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('click', () => {
+    alert(`Learn more about ${card.querySelector('.service-title').textContent}!`);
+  });
+});
+
+  </script>
+</body>
+</html>
