@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: lightgoldenrodyellow;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1000px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact-image img {
+    width: 400px;
+    object-fit: cover;
+}
+
+.contact-form-container {
+    padding: 30px;
+    flex: 1;
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff8800;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff8800;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background: #ff8800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #cc7000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-image img {
+        width: 100%;
+    }
+}
+
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-image">
+                <img src="https://img.freepik.com/premium-photo/3d-plane-flying-world-illustration-airplane-route-illustration-travel-from-starting-point-location-pin-travel-icon-trendy-modern-vector-3d-style_839035-1746578.jpg" alt="Airplane and World Illustration" height="100%">
+            </div>
+            <div class="contact-form-container">
+                <h2>Contact</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="number" placeholder="Phone Number" required>
+                        <input type="text" id="subject" placeholder="Subject" required>
+                    </div>
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                 <br>
+                  <center>
+                    <a class="back-link" href="intro.html">Back to Home</a>
+                  </center>
+              
+                </form>
+            </div>
+        </div>
+        
+    </section>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const number = document.getElementById('number').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name && email && number && subject && message) {
+        alert(`Thank you, ${name}! Your message has been sent.`);
+        this.reset();
+    } else {
+        alert('Please fill out all fields.');
+    }
+});
+
+    </script>
+</body>
+</html>
