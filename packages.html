@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Packages</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: beige
+}
+
+.packages {
+  text-align: center;
+  padding: 20px;
+}
+
+.packages h1 {
+  font-size: 2.5em;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 10px 15px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card p {
+  margin: 10px 15px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.price {
+  margin: 15px;
+}
+
+.discounted {
+  font-size: 1.2em;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.original {
+  text-decoration: line-through;
+  margin-left: 10px;
+  color: #999;
+}
+
+button {
+  margin: 15px;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff9900;
+}
+
+  </style>
+</head>
+<body>
+  <div class="packages">
+    <h1>PACKAGES</h1>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://paramountclientweb.s3.ap-south-1.amazonaws.com/indian-holiday-trip/Place/2023/Mar/Img_2726_202353271046_juhu_beach.jpg" alt="Mumbai">
+        <h2>Mumbai</h2>
+         <div class="price">
+          <span class="discounted">10,000.00/-</span>
+          
+        </div>
+        <button><a href="book2.html" class="hover:text-yellow-300">Book Now</a></button>
+      </div>
+      <div class="card">
+        <img src="https://assets.princess.com/is/image/princesscruises/makena-maui-hawaii-sunset-beach-shoreline-palm-trees:16x9?ts=1710277222971" alt="Hawaii">
+        <h2>Hawaii</h2>
+          <div class="price">
+          <span class="discounted">150000.00/-</span>
+          
+        </div>
+        <button><a href="book2.html" class="hover:text-yellow-300">Book Now</a></button>
+      </div>
+      <div class="card">
+        <img src="https://cdn.britannica.com/71/188471-050-CF188A6B/Sydney-Opera-House-Port-Jackson.jpg" alt="Sydney">
+        <h2>Sydney</h2>
+        <div class="price">
+          <span class="discounted">170000.00/-</span>
+          </div>
+        <button><a href="book2.html" class="hover:text-yellow-300">Book Now</a></button>
+        </div>
+
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/517364023/photo/lotus-temple.jpg?s=612x612&w=0&k=20&c=Ap7wHtvS2nWcIyUsEDhThIln1VOcWlm50dVv7GYcBbI=" alt="Delhi">
+          <h2>Delhi</h2>
+          <div class="price">
+            <span class="discounted">10000.00/-</span>
+            </div>
+          <button><a href="book2.html" class="hover:text-yellow-300">Book Now</a></button>
+          </div>
+
+          <div class="card">
+            <img src="https://media.istockphoto.com/id/539167007/photo/aerial-view-on-zermatt-valley-and-matterhorn-peak-at-dawn.jpg?s=612x612&w=0&k=20&c=Mcd6ZtYa28wwyMMkwzri8wa_7vgaSpz5HJnKW1Gh8qk=" alt="SwitzerLand">
+            <h2>SwitzerLand</h2>
+            <div class="price">
+              <span class="discounted">250000.00/-</span>
+              </div>
+            <button><a href="book2.html" class="hover:text-yellow-300">Book Now</a></button>
+            </div>
+
+            <div class="card">
+              <img src="https://media.istockphoto.com/id/1432668060/photo/eiffel-tour-and-paris-cityscape.jpg?s=612x612&w=0&k=20&c=7pN8ZNQdUnzQLWxFqIB2CcFPRYompTerfrpQFDHbl04=" alt="Paris">
+              <h2>Paris</h2>
+              <div class="price">
+                <span class="discounted">150000.00/-</span>
+                </div>
+              <button><a href="book2.html" class="hover:text-yellow-300">Book Now</a></button>
+              </div>
+
+              <div class="card">
+                <img src="https://media.istockphoto.com/id/1390815938/photo/tokyo-city-in-japan.jpg?s=612x612&w=0&k=20&c=VHiC3TlbXkb-Yf6WUYjh825Y0nGMCTkNUa9j8X8rVfY=" alt="Tokyo">
+                <h2>Tokyo</h2>
+                <div class="price">
+                  <span class="discounted">180000.00/-</span>
+                  </div>
+                <button><a href="book2.html" class="hover:text-yellow-300">Book Now</a></button>
+                </div>
+
+                <div class="card">
+                  <img src="https://media.istockphoto.com/id/1939500219/photo/singapore-cityscape-at-night-twilight-drone-flight-panorama.jpg?s=612x612&w=0&k=20&c=WzBoQ0MoFPfwXVjICcjSGJHUOWlCvARaDIbhBK7hBig=" alt="Singapore">
+                  <h2>Singapore</h2>
+                  <div class="price">
+                    <span class="discounted">100000.00/-</span>
+                    </div>
+                  <button><a href="book2.html" class="hover:text-yellow-300">Book Now</a></button>
+                  </div>
+    </div>
+    <br>
+        <center>
+        <a class="back-link" href="intro.html">Back to Home</a>
+      </center>
+  </div>
+ <script>
+document.querySelectorAll("button").forEach(button => {
+  button.addEventListener("click", () => {
+    alert("Booking confirmed!");
+  });
+});
+</script>
+
+</body>
+</html>
