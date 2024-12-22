@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking Interface</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://i.ytimg.com/vi/ARaZROhkug4/maxresdefault.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-blend-mode: overlay;
+      filter: brightness(0.9) contrast(1.2);
+      color: #333;
+    }
+
+    .header {
+      background: rgba(0, 53, 128, 0.9);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .header .logo span {
+      color: red;
+    }
+
+    .user-options button {
+      background: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #003580;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .menu a i {
+      font-size: 18px;
+    }
+
+    .booking-form {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .special-fares label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .search-button {
+      background: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background: rgba(0, 53, 128, 0.9);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">VOYAGEVISTA</div>
+    <div class="user-options">
+      <button><a href="login.html">Login or Create Account</a></button>
+      
+      <select>
+        <option>IN | ENG</option>
+      </select>
+      <select>
+        <option>INR</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="menu">
+      <a href="#"><i class="fas fa-plane"></i> Flights</a>
+      <a href="#"><i class="fas fa-hotel"></i> Hotels</a>
+      <a href="#"><i class="fas fa-home"></i> Homestays</a>
+      <a href="#"><i class="fas fa-suitcase-rolling"></i> Holiday Packages</a>
+      <a href="#"><i class="fas fa-train"></i> Trains</a>
+      <a href="#"><i class="fas fa-bus"></i> Buses</a>
+      <a href="#"><i class="fas fa-car"></i> Cabs</a>
+      
+    </nav>
+
+    <div class="booking-form">
+      <div class="trip-type">
+        <label><input type="radio" name="trip" checked> One Way</label>
+        <label><input type="radio" name="trip"> Round Trip</label>
+        <label><input type="radio" name="trip"> Multi City</label>
+      </div>
+
+      <div class="form-group">
+        <label>From</label>
+        <select>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="New Delhi">New Delhi</option>
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Dubai">Dubai</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>To</label>
+        <input type="text" placeholder="Bengaluru">
+      </div>
+
+      <div class="form-group">
+        <label>Departure</label>
+        <input type="date" id="departureDate">
+      </div>
+
+      <div class="form-group">
+        <label>Return</label>
+        <input type="date" placeholder="Select return date">
+      </div>
+
+      <div class="form-group">
+        <label>Travellers & Class</label>
+        <select>
+          <option>1 Traveller - Economy</option>
+        </select>
+      </div>
+
+      <div class="special-fares">
+        <label><input type="radio" name="fare" checked> Regular</label>
+        <label><input type="radio" name="fare"> Student</label>
+        <label><input type="radio" name="fare"> Senior Citizen</label>
+      </div>
+
+      <button class="search-button">Search Flights</button>
+      <br><br>
+        <center>
+                      <a class="back-link" href="intro.html">Back to Home</a>
+                    </center>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 VOYAGEVISTA</p>
+  </footer>
+
+  <script>
+    document.querySelector('.search-button').addEventListener('click', () => {
+      const departureDate = document.getElementById('departureDate').value;
+      if (departureDate) {
+        alert(`Searching for flights departing on ${departureDate}...`);
+      } else {
+        alert('Please select a departure date.');
+      }
+    });
+  </script>
+</body>
+</html>
